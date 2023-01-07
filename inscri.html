@@ -1,0 +1,85 @@
+<html>
+<head> 
+<script type="text/javascript">
+function validateForm()                                    
+{ 
+    var nom = document.getElementById('A').value;             
+    var email = document.getElementById('B').value;               
+    var téléphone = document.getElementById('C').value;             
+   
+    if (nom ==true)                                  
+    { 
+         document.getElementById('A').innerHTML=nom; 
+       
+       
+    }else{
+        document.getElementById('A').innerHTML="invalide"; 
+    }
+	 if (téléphone ==true)                                  
+    { 
+         document.getElementById('C').innerHTML=téléphone; 
+       
+       
+    }else{
+        document.getElementById('C').innerHTML="invalide"; 
+    }
+       
+    if (email ==true)                                   
+    { 
+        document.getElementById('B').innerHTML=email; 
+       
+    }else{
+        document.getElementById('B').innerHTML="invalide"; 
+    }
+   
+    if (email.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('B').innerHTML=email; 
+        
+    } 
+   
+    if (email.indexOf(".", 0) < 0)                 
+    { 
+        document.getElementById('B').innerHTML="Veuillez entrez une adresse mail valide"; 
+    } 
+     alert("votre des informations sont:" +nom +"et"+ "" +email +"et" +téléphone);
+}
+</script>  
+<meta charset="utf-8"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <section class="contact" id="contact">
+	    <div class="titre-noir">
+		    <h2 class="titre_txt"><span>F</span>ormulaire</h2>
+			 <p>remplir ce formulaire</p></div>
+	  <div name="form" class="contact-form">
+	        <h3>Inscription</h3> 
+		<div input="inputboite" id="a" class="inputboite">
+	        <input name="nom" id="A" type="text"  placeholder="Nom et prénom"> 
+	    </div>
+		<div id="b" input="inputboite" class="inputboite">
+	        <input name="mail" id="B"  type="text"  placeholder="Email"> 
+	    </div> 
+		<div id="c" input="inputboite" class="inputboite">
+	        <input name="tél" type="text" id="C"   placeholder="numéro téléphone"> 
+	    </div> 
+		<div id="d" input="inputboite" class="inputboite">
+	        <input onClick="validateForm();" type="submit" value="CONNEXION"> 
+	    </div> 
+		</div> 
+	</section> 
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
